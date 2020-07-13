@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="20b9a427-5dc2-4c35-8b3a-cee2a32ad7af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/views/About.vue" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+        <option value="CoffeeScript File" />
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/admin" />
+  </component>
+  <component name="ProjectId" id="1eLZ5hejOGlcoegCFh4F80R074n" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/src/assets" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JetBrains\workplace\MyBank\admin\src\assets" />
+      <recent name="D:\JetBrains\workplace\MyBank\admin\src\iconfont" />
+      <recent name="D:\JetBrains\workplace\MyBank\admin\src" />
+      <recent name="D:\JetBrains\workplace\MyBank\admin\src\views\draw" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JetBrains\workplace\MyBank\admin\src\assets" />
+      <recent name="D:\JetBrains\workplace\MyBank\server" />
+      <recent name="D:\JetBrains\workplace\MyBank\admin\src\views\draw" />
+      <recent name="D:\JetBrains\workplace\MyBank\admin\src\views\account" />
+      <recent name="D:\JetBrains\workplace\MyBank\admin\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="loginRegister.vue" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MyBank/admin/src/loginRegister.vue" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.loginRegister.vue" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20b9a427-5dc2-4c35-8b3a-cee2a32ad7af" name="Default Changelist" comment="" />
+      <created>1594102651857</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594102651857</updated>
+      <workItem from="1594102653243" duration="106940000" />
+      <workItem from="1594603110188" duration="3927000" />
+      <workItem from="1594625828770" duration="22323000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="298" y="144" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594553830497">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="298" y="144" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1594553830497" />
+    <state x="250" y="118" key="EditFileWatcherDialog" timestamp="1594104364816">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="250" y="118" key="EditFileWatcherDialog/0.0.1280.680@0.0.1280.680" timestamp="1594104364816" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1594605223748">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594605223748" />
+    <state x="297" y="151" width="672" height="677" key="run.anything.popup" timestamp="1594604636922">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1594604636922" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1594654859912">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1594654859912" />
+  </component>
+</project>
