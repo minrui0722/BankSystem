@@ -4,8 +4,12 @@
 module.exports = app => {
   const express = require('express')
   const UserRouter = express.Router()
-  const User = require('../models/User')
   const jwt = require('jsonwebtoken')
+  const User = require('../models/User')
+  const DepositFixed = require('../models/DepositFixed')
+  const DepositCurrent = require('../models/DepositCurrent')
+  const DrawFixed = require('../models/DrawFixed')
+  const Account = require('../models/Account')
 
   // 接受用户的 登录信息
   UserRouter.post('/login',async (req,res) => {
@@ -32,7 +36,8 @@ module.exports = app => {
         username:userEmail.username,
         password:userPass.password,
         icon: userEmail.icon,
-        email: userEmail.email
+        email: userEmail.email,
+        radio: userEmail.radio
       })
     }
 
@@ -95,9 +100,22 @@ module.exports = app => {
   })
   //注销账号
   UserRouter.delete('/user/:token',async (req,res) => {
+    /*获取 该用户的 token 信息*/
     const token = await req.params.token.slice(1)
+    console.log('token:'+token);
+    /*根据 token信息获取到该用户的 id*/
     const userId = await jwt.verify(token,app.get('secret')).id
-    await User.findByIdAndRemove(userId)
+    console.log('userId:'+userId);
+    /*同时删除该用户的所有存款、取款、开户、回收站等明细信息*/
+    // 根据用户 id 获取到该用户的姓名username
+    const aa = await User.findById(userId)
+    console.log('aa:'+aa);
+    await DepositFixed.remove({name:aa.username})
+    await DepositCurrent.remove({name:aa.username})
+    await DrawFixed.remove({name:aa.username})
+    await Account.remove({name:aa.username})
+    /*删除该用户的  用户 信息*/
+    const removeUser = await User.findByIdAndRemove(userId)
     res.send({
       success: true
     })

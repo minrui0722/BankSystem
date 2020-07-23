@@ -8,6 +8,10 @@ const schema = mongoose.Schema({
   bankCategory: { type: String }, //银行类别
   money: { type: Number },// 取款金额
   balance: { type: Number },//余额
+  del: {
+    type: Boolean,
+    default: false
+  }
 },{
   timestamps: true  //时间戳
 })

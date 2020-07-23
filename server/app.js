@@ -21,6 +21,7 @@ require('./routes/Account')(app)
 require('./routes/DepositFixed')(app)
 require('./routes/DepositCurrent')(app)
 require('./routes/DrawFixed')(app)
+require('./routes/Recycle')(app)
 //启动路由器
 app.listen(5000, () => {
   console.log('Bank System is running...');

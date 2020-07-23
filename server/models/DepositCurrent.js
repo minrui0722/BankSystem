@@ -10,6 +10,10 @@ const schema = mongoose.Schema({
   duration: { type: String }, //存款期限
   money: { type: Number },// 存款金额
   balance: { type: Number },//余额
+  del: {
+    type: Boolean,
+    default: false
+  }
 },{
   timestamps: true  //时间戳
 })

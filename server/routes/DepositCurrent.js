@@ -31,13 +31,29 @@ module.exports = app => {
 
   // 获取数据库中所有存款操作的记录
   DepositRouter.get('/current',async (req,res) => {
-    const items = await DepositCurrent.find()
-    res.send(items)
+    let modelItems
+    if(req.query.radio === '管理员'){
+      modelItems = await DepositCurrent.find({del:false})
+      return res.send(modelItems)
+    }else{
+      /*获取前台传递过来的当前用户*/
+      const name = await req.query.username
+      /*根据当前用户找到数据库中所有关于该用户的开户信息*/
+      modelItems = await DepositCurrent.find({name:name,del:false})
+      res.send(modelItems)
+    }
   })
 
   // 删除指定 id 对应存款记录
   DepositRouter.delete('/current/:id',async (req,res) => {
-    await DepositCurrent.findByIdAndRemove(req.params.id)
+    /*根据ID找到对应存款信息*/
+    const ans = await DepositCurrent.findById(req.params.id)
+    /*获取该条存款信息记录的id号*/
+    const userId = await ans._id
+    /*将该改用信息记录的del字段设置为true，表示放入回收站*/
+    await DepositCurrent.updateOne({_id:userId},{$set:{"del": true}})
+    // const result = await DepositFixed.findById(userId)
+    // console.log(result);
     res.send({
       success: true
     })
