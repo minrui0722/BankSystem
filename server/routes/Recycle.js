@@ -43,6 +43,128 @@ module.exports = app => {
       })
     }
   })
+
+  RecycleRouter.get('/recycle/pagination/1',async (req,res) => {
+    let items1
+    let items2
+    let items3
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      /*根据当前用户找到数据库中所有关于该用户的开户信息*/
+      items1 = await DrawFixed.find({name:name,del: true}).limit(5)
+      items2 = await DepositFixed.find({name:name,del: true}).limit(5)
+      items3 = await DepositCurrent.find({name:name,del: true}).limit(5)
+    }else{
+      items1 = await DrawFixed.find().limit(5)
+      items2 = await DepositFixed.find().limit(5)
+      items3 = await DepositCurrent.find().limit(5)
+    }
+    return res.send({
+      items1: items1,
+      items2: items2,
+      items3: items3,
+    })
+  })
+  RecycleRouter.get('/recycle/pagination/2',async (req,res) => {
+    let items1
+    let items2
+    let items3
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      /*根据当前用户找到数据库中所有关于该用户的开户信息*/
+      items1 = await DrawFixed.find({name:name,del: true}).limit(5).skip(5 * 1)
+      items2 = await DepositFixed.find({name:name,del: true}).limit(5).skip(5 * 1)
+      items3 = await DepositCurrent.find({name:name,del: true}).limit(5).skip(5 * 1)
+    }else{
+      items1 = await DrawFixed.find().limit(5).skip(5 * 1)
+      items2 = await DepositFixed.find().limit(5).skip(5 * 1)
+      items3 = await DepositCurrent.find().limit(5).skip(5 * 1)
+    }
+    return res.send({
+      items1: items1,
+      items2: items2,
+      items3: items3,
+    })
+  })
+  RecycleRouter.get('/recycle/pagination/3',async (req,res) => {
+    let items1
+    let items2
+    let items3
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      /*根据当前用户找到数据库中所有关于该用户的开户信息*/
+      items1 = await DrawFixed.find({name:name,del: true}).limit(5).skip(5 * 2)
+      items2 = await DepositFixed.find({name:name,del: true}).limit(5).skip(5 * 2)
+      items3 = await DepositCurrent.find({name:name,del: true}).limit(5).skip(5 * 2)
+    }else{
+      items1 = await DrawFixed.find().limit(5).skip(5 * 2)
+      items2 = await DepositFixed.find().limit(5).skip(5 * 2)
+      items3 = await DepositCurrent.find().limit(5).skip(5 * 2)
+    }
+    return res.send({
+      items1: items1,
+      items2: items2,
+      items3: items3,
+    })
+  })
+  RecycleRouter.get('/recycle/pagination/4',async (req,res) => {
+    let items1
+    let items2
+    let items3
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      /*根据当前用户找到数据库中所有关于该用户的开户信息*/
+      items1 = await DrawFixed.find({name:name,del: true}).limit(5).skip(5 * 3)
+      items2 = await DepositFixed.find({name:name,del: true}).limit(5).skip(5 * 3)
+      items3 = await DepositCurrent.find({name:name,del: true}).limit(5).skip(5 * 3)
+    }else{
+      items1 = await DrawFixed.find().limit(5).skip(5 * 3)
+      items2 = await DepositFixed.find().limit(5).skip(5 * 3)
+      items3 = await DepositCurrent.find().limit(5).skip(5 * 3)
+    }
+    return res.send({
+      items1: items1,
+      items2: items2,
+      items3: items3,
+    })
+  })
+  RecycleRouter.get('/recycle/pagination/5',async (req,res) => {
+    let items1
+    let items2
+    let items3
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      /*根据当前用户找到数据库中所有关于该用户的开户信息*/
+      items1 = await DrawFixed.find({name:name,del: true}).limit(5).skip(5 * 4)
+      items2 = await DepositFixed.find({name:name,del: true}).limit(5).skip(5 * 4)
+      items3 = await DepositCurrent.find({name:name,del: true}).limit(5).skip(5 * 4)
+    }else{
+      items1 = await DrawFixed.find().limit(5).skip(5 * 4)
+      items2 = await DepositFixed.find().limit(5).skip(5 * 4)
+      items3 = await DepositCurrent.find().limit(5).skip(5 * 4)
+    }
+    return res.send({
+      items1: items1,
+      items2: items2,
+      items3: items3,
+    })
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // 真正的删除数据库中的对应 ID 的信息记录
   RecycleRouter.delete('/recycle/:id',async (req,res) => {
     let items1

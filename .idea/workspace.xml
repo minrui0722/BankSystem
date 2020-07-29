@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b9a427-5dc2-4c35-8b3a-cee2a32ad7af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin" beforeDir="false" afterPath="$PROJECT_DIR$/admin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/package-lock.json" afterDir="false" />
@@ -12,16 +10,11 @@
       <change beforePath="$PROJECT_DIR$/admin/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/views/About.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/DepositCurrent.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/DepositCurrent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/DepositFixed.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/DepositFixed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/DrawFixed.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/DrawFixed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/User.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/Account.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/DepositCurrent.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/DepositCurrent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/DepositFixed.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/DepositFixed.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/DrawFixed.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/DrawFixed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/Recycle.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/Recycle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +26,9 @@
       <list>
         <option value="SCSS File" />
         <option value="CoffeeScript File" />
-        <option value="Vue Single File Component" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -54,7 +47,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/src/assets/iconfont" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -66,18 +59,18 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JetBrains\workplace\MyBank\admin\src\assets" />
-      <recent name="D:\JetBrains\workplace\MyBank\server" />
-      <recent name="D:\JetBrains\workplace\MyBank\admin\src\views\draw" />
-      <recent name="D:\JetBrains\workplace\MyBank\admin\src\views\account" />
-      <recent name="D:\JetBrains\workplace\MyBank\admin\src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JetBrains\workplace\MyBank\admin\src\assets\iconfont" />
       <recent name="D:\JetBrains\workplace\MyBank\admin\src\assets" />
       <recent name="D:\JetBrains\workplace\MyBank\admin\src\iconfont" />
       <recent name="D:\JetBrains\workplace\MyBank\admin\src" />
+      <recent name="D:\JetBrains\workplace\MyBank\admin\src\views\draw" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JetBrains\workplace\MyBank\admin\src\views" />
+      <recent name="D:\JetBrains\workplace\MyBank\admin\src\pagination" />
+      <recent name="D:\JetBrains\workplace\MyBank\admin\src\assets" />
+      <recent name="D:\JetBrains\workplace\MyBank\server" />
       <recent name="D:\JetBrains\workplace\MyBank\admin\src\views\draw" />
     </key>
   </component>
@@ -112,6 +105,14 @@
       <workItem from="1594736328850" duration="232000" />
       <workItem from="1595385891503" duration="31041000" />
       <workItem from="1595465804999" duration="21466000" />
+      <workItem from="1595559949481" duration="17000" />
+      <workItem from="1595641948704" duration="9069000" />
+      <workItem from="1595862278342" duration="3068000" />
+      <workItem from="1595902454533" duration="557000" />
+      <workItem from="1595903646656" duration="13000" />
+      <workItem from="1595942673594" duration="21077000" />
+      <workItem from="1596017115835" duration="1195000" />
+      <workItem from="1596025349817" duration="840000" />
     </task>
     <servers />
   </component>
@@ -123,18 +124,18 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="298" y="144" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1594553830497" />
-    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595502541360">
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595993272492">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1595502541360" />
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1595993272492" />
     <state x="250" y="118" key="EditFileWatcherDialog" timestamp="1594693925259">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="250" y="118" key="EditFileWatcherDialog/0.0.1280.680@0.0.1280.680" timestamp="1594693925259" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1594605223748">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1595903658236">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594605223748" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1595903658236" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1594693926597">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -143,9 +144,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1595432660985" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595498423741">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595663901125">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595498423741" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1595663901125" />
   </component>
 </project>

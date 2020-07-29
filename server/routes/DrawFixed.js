@@ -80,20 +80,6 @@ module.exports = app => {
     }
   })
 
-  // 获取数据库中所有存款操作的记录
-  DrawFixedRouter.get('/draw',async (req,res) => {
-    let modelItems
-    if(req.query.radio === '管理员'){
-      modelItems = await DrawFixed.find({del:false})
-      return res.send(modelItems)
-    }else{
-      /*获取前台传递过来的当前用户*/
-      const name = await req.query.username
-      /*根据当前用户找到数据库中所有关于该用户的开户信息*/
-      modelItems = await DrawFixed.find({name:name,del:false})
-      res.send(modelItems)
-    }
-  })
   // 删除指定 id 对应存款记录
   DrawFixedRouter.delete('/draw/:id',async (req,res) => {
     /*根据ID找到对应存款信息*/
@@ -108,6 +94,82 @@ module.exports = app => {
       success: true
     })
   })
+
+
+
+  // 获取数据库中所有存款操作的记录
+  DrawFixedRouter.get('/draw',async (req,res) => {
+    let modelItems
+    if(req.query.radio === '管理员'){
+      modelItems = await DrawFixed.find({del:false})
+      return res.send(modelItems)
+    }else{
+      /*获取前台传递过来的当前用户*/
+      const name = await req.query.username
+      /*根据当前用户找到数据库中所有关于该用户的开户信息*/
+      modelItems = await DrawFixed.find({name:name,del:false})
+      res.send(modelItems)
+    }
+  })
+  DrawFixedRouter.get('/draw/pagination/1',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await DrawFixed.find({name}).limit(5)
+    }else{
+      lists = await DrawFixed.find().limit(5)
+    }
+    res.send(lists)
+  })
+  DrawFixedRouter.get('/draw/pagination/2',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await DrawFixed.find({name}).limit(5).skip(5 * 1)
+    }else{
+      lists = await DrawFixed.find().limit(5).skip(5 * 1)
+    }
+    res.send(lists)
+  })
+  DrawFixedRouter.get('/draw/pagination/3',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await DrawFixed.find({name}).limit(5).skip(5 * 2)
+    }else{
+      lists = await DrawFixed.find().limit(5).skip(5 * 2)
+    }
+    res.send(lists)
+  })
+  DrawFixedRouter.get('/draw/pagination/4',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await DrawFixed.find({name}).limit(5).skip(5 * 3)
+    }else{
+      lists = await DrawFixed.find().limit(5).skip(5 * 3)
+    }
+    res.send(lists)
+  })
+  DrawFixedRouter.get('/draw/pagination/5',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await DrawFixed.find({name}).limit(5).skip(5 * 4)
+    }else{
+      lists = await DrawFixed.find().limit(5).skip(5 * 4)
+    }
+    res.send(lists)
+  })
+
+
+
+
+
+
+
+
+
 
   app.use('/bank/admin/api',DrawFixedRouter)
 }

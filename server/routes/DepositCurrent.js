@@ -29,20 +29,7 @@ module.exports = app => {
     }
   })
 
-  // 获取数据库中所有存款操作的记录
-  DepositRouter.get('/current',async (req,res) => {
-    let modelItems
-    if(req.query.radio === '管理员'){
-      modelItems = await DepositCurrent.find({del:false})
-      return res.send(modelItems)
-    }else{
-      /*获取前台传递过来的当前用户*/
-      const name = await req.query.username
-      /*根据当前用户找到数据库中所有关于该用户的开户信息*/
-      modelItems = await DepositCurrent.find({name:name,del:false})
-      res.send(modelItems)
-    }
-  })
+
 
   // 删除指定 id 对应存款记录
   DepositRouter.delete('/current/:id',async (req,res) => {
@@ -58,6 +45,88 @@ module.exports = app => {
       success: true
     })
   })
+
+
+  // 获取数据库中所有存款操作的记录
+  DepositRouter.get('/current',async (req,res) => {
+    let modelItems
+    if(req.query.radio === '管理员'){
+      modelItems = await DepositCurrent.find({del:false})
+      return res.send(modelItems)
+    }else{
+      /*获取前台传递过来的当前用户*/
+      const name = await req.query.username
+      /*根据当前用户找到数据库中所有关于该用户的开户信息*/
+      modelItems = await DepositCurrent.find({name:name,del:false})
+      res.send(modelItems)
+    }
+  })
+  DepositRouter.get('/current/pagination/1',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await DepositCurrent.find({name}).limit(5)
+    }else{
+      lists = await DepositCurrent.find().limit(5)
+    }
+    res.send(lists)
+  })
+  DepositRouter.get('/current/pagination/2',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await DepositCurrent.find({name}).limit(5).skip(5 * 1)
+    }else{
+      lists = await DepositCurrent.find().limit(5).skip(5 * 1)
+    }
+    res.send(lists)
+  })
+  DepositRouter.get('/current/pagination/3',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await DepositCurrent.find({name}).limit(5).skip(5 * 2)
+    }else{
+      lists = await DepositCurrent.find().limit(5).skip(5 * 2)
+    }
+    res.send(lists)
+  })
+  DepositRouter.get('/current/pagination/4',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await DepositCurrent.find({name}).limit(5).skip(5 * 3)
+    }else{
+      lists = await DepositCurrent.find().limit(5).skip(5 * 3)
+    }
+    res.send(lists)
+  })
+  DepositRouter.get('/current/pagination/5',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await DepositCurrent.find({name}).limit(5).skip(5 * 4)
+    }else{
+      lists = await DepositCurrent.find().limit(5).skip(5 * 4)
+    }
+    res.send(lists)
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   app.use('/bank/admin/api',DepositRouter)
 }

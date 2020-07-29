@@ -23,20 +23,15 @@ module.exports = app => {
       res.send(model)
     }
   })
-  // 请求数据库中的所有开户信息
-  AccountRouter.get('/account',async (req,res) => {
-    let modelItems
-    if(req.query.radio === '管理员'){
-      modelItems = await Account.find()
-      return res.send(modelItems)
-    }else{
-      /*获取前台传递过来的当前用户*/
-      const name = await req.query.username
-      /*根据当前用户找到数据库中所有关于该用户的开户信息*/
-      modelItems = await Account.find({name})
-      res.send(modelItems)
-    }
+
+  // 请求对应姓名的用户开户记录，用户获取其性别、身份证号
+  AccountRouter.get('/account/:name',async (req,res) => {
+    console.log(req.params);
+    const item = await Account.findOne({name:req.params.name})
+    res.send(item)
   })
+
+
   // 删除对应 ID 的开户信息
   AccountRouter.delete('/account/:id',async (req,res) => {
     /*删除开户列表中的记录*/
@@ -64,6 +59,84 @@ module.exports = app => {
     const modelEditId = await Account.findById(req.params.id)
     res.send(modelEditId)
   })
+
+
+
+
+  // 请求数据库中的所有开户信息
+  AccountRouter.get('/account',async (req,res) => {
+    let modelItems
+    if(req.query.radio === '管理员'){
+      // 如果是管理员则直接返回所有的用户开户信息
+      modelItems = await Account.find()
+      return res.send(modelItems)
+    }else{
+      /*获取前台传递过来的当前用户*/
+      const name = await req.query.username
+      /*根据当前用户找到数据库中所有关于该用户的开户信息*/
+      modelItems = await Account.find({name})
+      res.send(modelItems)
+    }
+  })
+  AccountRouter.get('/account/pagination/1',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await Account.find({name}).limit(5)
+    }else{
+      lists = await Account.find().limit(5)
+    }
+    res.send(lists)
+  })
+  AccountRouter.get('/account/pagination/2',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await Account.find({name}).limit(5).skip(5 * 1)
+    }else{
+      lists = await Account.find().limit(5).skip(5 * 1)
+    }
+    res.send(lists)
+  })
+  AccountRouter.get('/account/pagination/3',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await Account.find({name}).limit(5).skip(5 * 2)
+    }else{
+      lists = await Account.find().limit(5).skip(5 * 2)
+    }
+    res.send(lists)
+  })
+  AccountRouter.get('/account/pagination/4',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await Account.find({name}).limit(5).skip(5 * 3)
+    }else{
+      lists = await Account.find().limit(5).skip(5 * 3)
+    }
+    res.send(lists)
+  })
+  AccountRouter.get('/account/pagination/5',async (req,res) => {
+    let lists
+    if(req.query.radio === '用户'){
+      const name = await req.query.username
+      lists = await Account.find({name}).limit(5).skip(5 * 4)
+    }else{
+      lists = await Account.find().limit(5).skip(5 * 4)
+    }
+    res.send(lists)
+  })
+
+
+
+
+
+
+
+
+
 
   app.use('/bank/admin/api',AccountRouter)
 }
